@@ -39,6 +39,7 @@ router.put('/:id', function(req, res){
 		res.json(video);
 	});
 });
+
 router.delete('/:id', function(req, res){
 	var collection = db.get('videos');
 	collection.remove({ _id: req.params.id}, function(err, video){

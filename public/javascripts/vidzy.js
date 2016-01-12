@@ -58,6 +58,7 @@ app.controller('DeleteVideoCtrl', ['$scope', '$resource', '$location', '$routePa
 		Videos.get({ id: $routeParams.id }, function(video){
 			$scope.video = video;
 		});
+		
 		$scope.delete = function(){
 			Videos.delete({ id: $routeParams.id }, function(video){
 				$location.path('/');
